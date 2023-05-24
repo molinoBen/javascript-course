@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      const bool1 = 3 > 4;
+      /*const bool1 = 3 > 4;
       console.log(bool1);
       if (bool1 === false) {
         console.log('true');
@@ -24,6 +24,16 @@
       } else {
         console.log('not allowed to drive');
       }
+      */
+
+      const result = false ? 'truthy' : 'falsy';
+      console.log(result);
+
+      const message = 1 && 'hello';
+      console.log(message);
+
+      const currency = undefined || 'USD';
+      console.log(currency);
     </script>
   </body>
 </html>
