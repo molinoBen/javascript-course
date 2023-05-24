@@ -10,15 +10,29 @@
     <p>Rock Paper Scissors</p>
     <button
       onclick="
+
+            let computer = '';
             if(computerChoice == 1 ){
-               alert('You lose, The Computer choose Paper')
+              computer = 'Paper';
                 
             }else if (computerChoice == 2) {
-                alert('Try again, you both choose Rock')
+                computer = 'Rock';
                 
             }else {
-                alert ('You win! The Computer choose Scissors')
+                computer = 'Scissors';
             }
+            console.log(computer);
+
+            let result = '';
+            if (computer === 'Paper'){
+                result = 'You lose.'
+            } else if (computer == 'Rock'){
+                result = 'it\'s a tie.'
+            }else {
+                result = 'You win!'
+            }
+
+            alert(`You picked rock. The Computer picked ${computer}. ${result}`);
         "
     >
       Rock
@@ -26,12 +40,25 @@
     <button
       onclick="
             if(computerChoice == 1 ){
-                alert('Try again, you both choose Paper')
-            }else if (computerChoice == 2){
-                alert ('You win! The Computer choose Rock')
+              computer = 'Paper';
+                
+            }else if (computerChoice == 2) {
+                computer = 'Rock';
+                
             }else {
-                alert('You lose, The Computer choose Paper')
+                computer = 'Scissors';
             }
+            console.log(computer);
+
+            if (computer === 'Paper'){
+                result = 'it\'s a tie.'
+            } else if (computer == 'Rock'){
+                result = 'You win!'
+            }else {
+                result = 'You lose.'
+            }
+
+            alert(`You picked paper. The Computer picked ${computer}. ${result}`);
         "
     >
       Paper
@@ -39,12 +66,25 @@
     <button
       onclick="
             if(computerChoice == 1 ){
-                alert('You win! The Computer choose Paper')
-            }else if (computerChoice == 2){
-                alert ('You lose, The Computer choose Rock')
+              computer = 'Paper';
+                
+            }else if (computerChoice == 2) {
+                computer = 'Rock';
+                
             }else {
-                alert('Try again, you both choose Scissors')
+                computer = 'Scissors';
             }
+            console.log(computer);
+
+            if (computer === 'Paper'){
+                result = 'You win!'
+            } else if (computer == 'Rock'){
+                result = 'You lose.'
+            }else {
+                result = 'it\'s a tie.'
+            }
+
+            alert(`You picked scissors. The Computer picked ${computer}. ${result}`);
         "
     >
       Scissors
