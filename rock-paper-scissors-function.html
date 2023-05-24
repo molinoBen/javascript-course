@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+            const computer = pickComputer();
+            let result = '';
+            if (computer === 'Paper'){
+                result = 'You lose.'
+            } else if (computer == 'Rock'){
+                result = 'it\'s a tie.'
+            }else {
+                result = 'You win!'
+            }
+
+            alert(`You picked rock. The Computer picked ${computer}. ${result}`);
+        "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+            const computer = pickComputer();
+            if (computer === 'Paper'){
+                result = 'it\'s a tie.'
+            } else if (computer == 'Rock'){
+                result = 'You win!'
+            }else {
+                result = 'You lose.'
+            }
+
+            alert(`You picked paper. The Computer picked ${computer}. ${result}`);
+        "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+            const computer = pickComputer();
+            if (computer === 'Paper'){
+                result = 'You win!'
+            } else if (computer == 'Rock'){
+                result = 'You lose.'
+            }else {
+                result = 'it\'s a tie.'
+            }
+
+            alert(`You picked scissors. The Computer picked ${computer}. ${result}`);
+        "
+    >
+      Scissors
+    </button>
+
+    <script>
+      function pickComputer() {
+        const computerChoice1 = Math.floor(Math.random() * 3 + 1);
+        let computer = '';
+
+        if (computerChoice1 == 1) {
+          computer = 'Paper';
+        } else if (computerChoice1 == 2) {
+          computer = 'Rock';
+        } else {
+          computer = 'Scissors';
+        }
+
+        return computer;
+      }
+    </script>
+  </body>
+</html>
