@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+            if(computerChoice == 1 ){
+               alert('You lose, The Computer choose Paper')
+                
+            }else if (computerChoice == 2) {
+                alert('Try again, you both choose Rock')
+                
+            }else {
+                alert ('You win! The Computer choose Scissors')
+            }
+        "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+            if(computerChoice == 1 ){
+                alert('Try again, you both choose Paper')
+            }else if (computerChoice == 2){
+                alert ('You win! The Computer choose Rock')
+            }else {
+                alert('You lose, The Computer choose Paper')
+            }
+        "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+            if(computerChoice == 1 ){
+                alert('You win! The Computer choose Paper')
+            }else if (computerChoice == 2){
+                alert ('You lose, The Computer choose Rock')
+            }else {
+                alert('Try again, you both choose Scissors')
+            }
+        "
+    >
+      Scissors
+    </button>
+    <button onclick="computerChoice">RESET</button>
+    <script>
+      const computerChoice = Math.floor(Math.random() * 3 + 1);
+      console.log(computerChoice);
+    </script>
+  </body>
+</html>
