@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+    <script>
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button').innerHTML = 'Hi';
+
+      document.querySelector('.js-button').innerHTML =
+        'This is the Second Button';
+
+      const buttonElement = document.querySelector('.js-button');
+
+      console.log(buttonElement.innerHTML);
+      /*
+      console.log(document.title);
+
+      document.body.innerHTML = '<button>Hello</button>';
+      */
+      /*
+      document.body.innerHTML = 'heloo';
+      document.title = 'Good Job';
+      */
+    </script>
+  </body>
+</html>
