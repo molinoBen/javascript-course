@@ -8,9 +8,21 @@
     <link />
   </head>
   <body>
-
-    <button></button>
+    <button onclick="" class="js-button">Click</button>
     <script>
+      const buttonElement = document.querySelector('.js-button');
+
+      const eventListener = () => {
+        console.log('CLICKss');
+      };
+
+      buttonElement.addEventListener('click', eventListener);
+      buttonElement.addEventListener('click', () => {
+        console.log('click2');
+      });
+
+      buttonElement.removeEventListener('click', eventListener);
+
       /*
       function greeting() {
         console.log('Hello');
