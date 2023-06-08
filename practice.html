@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors game</p>
+    <button class="js-rock-btn">Rock</button>
+    <button class="js-paper-btn">Paper</button>
+    <button class="js-scissor-btn">Scissor</button>
+
+    <script>
+      function computerMove() {
+        let computerPick = '';
+        const computerMove = Math.floor(Math.random() * 3 + 1);
+        if (computerMove === 1) {
+          computerPick = 'Rock';
+        } else if (computerMove === 2) {
+          computerPick = 'Paper';
+        } else {
+          computerPick = 'Scissor';
+        }
+        return computerPick;
+      }
+      let result = '';
+      let playerMove = '';
+      document.querySelector('.js-rock-btn').addEventListener('click', () => {
+        playerMove = 'Rock';
+        playGame();
+      });
+
+      document.querySelector('.js-paper-btn').addEventListener('click', () => {
+        playerMove = 'Paper';
+        playGame();
+      });
+
+      document
+        .querySelector('.js-scissor-btn')
+        .addEventListener('click', () => {
+          playerMove = 'Scissor';
+          playGame();
+        });
+
+      function playGame() {
+        const computerPick = computerMove();
+        let results = '';
+        if (playerMove === 'Rock') {
+          if (computerPick === 'Paper') {
+            results = 'You lose.';
+          } else if (computerPick === 'Rock') {
+            results = 'its a tie.';
+          } else {
+            results = 'You win.';
+          }
+        } else if (playerMove === 'Paper') {
+          if (computerPick === 'Paper') {
+            results = 'its a tie.';
+          } else if (computerPick === 'Rock') {
+            results = 'You win.';
+          } else {
+            results = 'You lose.';
+          }
+        } else {
+          if (computerPick === 'Paper') {
+            results = 'You win.';
+          } else if (computerPick === 'Rock') {
+            results = 'You lose.';
+          } else {
+            results = 'its a tie';
+          }
+        }
+        alert(
+          `You pick ${playerMove}. The Computer pick ${computerPick}. ${results}`
+        );
+      }
+    </script>
+  </body>
+</html>
